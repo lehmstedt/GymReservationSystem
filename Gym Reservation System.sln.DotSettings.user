@@ -4,8 +4,4 @@
     &lt;TestId&gt;xUnit::02CF8DFD-A097-42C8-A32A-A020A7528661::net9.0::Tests.ReservationSystemTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3f4b454a_002Dd365_002D4118_002D8ffb_002D3e6295d3488f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ReserveAClass_ShouldFail_WhenClassDoesNotExist #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::02CF8DFD-A097-42C8-A32A-A020A7528661::net9.0::Tests.ReserveAClassTests.ReserveAClass_ShouldFail_WhenClassDoesNotExist&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+	</wpf:ResourceDictionary>

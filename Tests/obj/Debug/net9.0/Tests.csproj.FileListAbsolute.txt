@@ -101,3 +101,4 @@
 /home/sebastien/RiderProjects/Gym Reservation System/Tests/obj/Debug/net9.0/ref/Tests.dll
 /home/sebastien/RiderProjects/Gym Reservation System/Tests/bin/Debug/net9.0/Infrastructure.dll
 /home/sebastien/RiderProjects/Gym Reservation System/Tests/bin/Debug/net9.0/Infrastructure.pdb
+/home/sebastien/RiderProjects/Gym Reservation System/Tests/obj/Debug/net9.0/Tests.sourcelink.json

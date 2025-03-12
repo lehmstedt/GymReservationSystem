@@ -1,0 +1,39 @@
+@using Domain
+@rendermode InteractiveServer
+<h2>@GymClassViewModel?.Name</h2>
+<div class="form-group">
+    <label for="reservationName">Name for reservation</label>
+    <input id="reservationName" class="form-control" type="text" @bind="_reservationName"/>
+</div>
+
+<button class="btn btn-primary" @onclick="ReserveClass">Reserve class</button>
+
+<h3>Who is coming</h3>
+<ul>
+    @foreach (var reservation in AlreadyMadeReservations)
+    {
+        <li>@reservation</li>
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public required GymClassViewModel GymClassViewModel { get; set; }
+    private string _reservationName = "Jane Doe";
+    private IReadOnlyCollection<string> AlreadyMadeReservations { get; set; } = [];
+    
+    [Parameter]
+    public required ReservationSystem ReservationSystem { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        AlreadyMadeReservations = await ReservationSystem.ListReservations(GymClassViewModel.Id);
+    }
+    
+    private async Task ReserveClass()
+    {
+        await ReservationSystem.Reserve(GymClassViewModel.Id, _reservationName);
+        AlreadyMadeReservations = await ReservationSystem.ListReservations(GymClassViewModel.Id);
+
+    }
+}

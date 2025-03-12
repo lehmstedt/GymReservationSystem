@@ -13,3 +13,4 @@
 /home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/refint/Infrastructure.dll
 /home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/Infrastructure.pdb
 /home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/ref/Infrastructure.dll
+/home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/Infrastructure.sourcelink.json

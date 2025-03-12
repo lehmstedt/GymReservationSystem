@@ -15,9 +15,15 @@ public class ReservationSystem(IReservationPort reservationPort)
 
     }
 
-    public async Task<IReadOnlyCollection<GymClassListEntry>> ListClasses()
+    public async Task<GymClassViewModel[]> ListClasses()
     {
         var foundClasses = await reservationPort.ListClasses();
-        return foundClasses.Select(c => new GymClassListEntry(c.Name, c.Reservations)).ToList();
+        return foundClasses.Select(c => new GymClassViewModel(c)).ToArray();
+    }
+
+    public async Task<IReadOnlyCollection<string>> ListReservations(ClassId id)
+    {
+        var foundClass = await reservationPort.GetClass(id);
+        return foundClass?.Reservations ?? Array.Empty<string>();
     }
 }

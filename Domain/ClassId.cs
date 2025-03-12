@@ -8,6 +8,8 @@ public record ClassId()
     {
         return _guid.Equals(other?._guid);
     }
+    
+    public override string ToString() => _guid.ToString();
 
     public override int GetHashCode()
     {

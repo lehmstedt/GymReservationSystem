@@ -1,10 +1,10 @@
 namespace Domain;
 
-public class GymClass(ClassId classId, string name = "")
+public class GymClass(ClassId id, string name = "")
 {
     private readonly List<string> _reservations = [];
 
-    public ClassId ClassId { get; } = classId;
+    public ClassId Id { get; } = id;
     public IReadOnlyList<string> Reservations => _reservations;
     public string Name { get; } = name;
 
