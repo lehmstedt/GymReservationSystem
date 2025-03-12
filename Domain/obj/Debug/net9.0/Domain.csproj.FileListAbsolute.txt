@@ -9,3 +9,4 @@
 /home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/refint/Domain.dll
 /home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.pdb
 /home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/ref/Domain.dll
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.sourcelink.json

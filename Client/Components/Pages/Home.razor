@@ -1,0 +1,26 @@
+﻿@page "/"
+@using Configurator
+@using Domain
+
+<PageTitle>Home</PageTitle>
+
+<h1>Classes</h1>
+
+@foreach (var classEntry in _gymClasses)
+{
+    <h2>@classEntry.Name</h2>
+}
+
+@code {
+
+    private readonly ReservationSystem _reservationSystem = ReservationSystemConfigurator.ConfigureReservationSystem();
+    private IReadOnlyCollection<GymClassListEntry> _gymClasses = new List<GymClassListEntry>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _gymClasses = await _reservationSystem.ListClasses();
+    }
+
+    
+
+}
