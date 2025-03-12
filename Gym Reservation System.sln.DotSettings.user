@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2a7a7c13_002D8172_002D4ccd_002Da589_002Daa390d538dc5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ReserveAClass_ShouldFail_WhenClassDoesNotExist" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::02CF8DFD-A097-42C8-A32A-A020A7528661::net9.0::Tests.ReservationSystemTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3f4b454a_002Dd365_002D4118_002D8ffb_002D3e6295d3488f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ReserveAClass_ShouldFail_WhenClassDoesNotExist #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::02CF8DFD-A097-42C8-A32A-A020A7528661::net9.0::Tests.ReserveAClassTests.ReserveAClass_ShouldFail_WhenClassDoesNotExist&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

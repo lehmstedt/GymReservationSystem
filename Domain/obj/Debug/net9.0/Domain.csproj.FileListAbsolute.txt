@@ -1,0 +1,11 @@
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/bin/Debug/net9.0/Domain.deps.json
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/bin/Debug/net9.0/Domain.dll
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/bin/Debug/net9.0/Domain.pdb
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.dll
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/refint/Domain.dll
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/Domain.pdb
+/home/sebastien/RiderProjects/Gym Reservation System/Domain/obj/Debug/net9.0/ref/Domain.dll
