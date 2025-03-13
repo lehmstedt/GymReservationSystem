@@ -14,3 +14,5 @@
 /home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/Infrastructure.pdb
 /home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/ref/Infrastructure.dll
 /home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/Infrastructure.sourcelink.json
+/home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/bin/Debug/net9.0/Infrastructure.runtimeconfig.json
+/home/sebastien/RiderProjects/Gym Reservation System/Infrastructure/obj/Debug/net9.0/Infrastructure.genruntimeconfig.cache

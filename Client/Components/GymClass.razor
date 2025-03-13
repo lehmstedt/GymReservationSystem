@@ -1,5 +1,6 @@
 @using Domain
 @rendermode InteractiveServer
+@inject ReservationSystem ReservationSystem
 <h2>@GymClassViewModel?.Name</h2>
 <div class="form-group">
     <label for="reservationName">Name for reservation</label>
@@ -21,9 +22,6 @@
     public required GymClassViewModel GymClassViewModel { get; set; }
     private string _reservationName = "Jane Doe";
     private IReadOnlyCollection<string> AlreadyMadeReservations { get; set; } = [];
-    
-    [Parameter]
-    public required ReservationSystem ReservationSystem { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

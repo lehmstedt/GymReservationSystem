@@ -1,6 +1,6 @@
 ﻿@page "/"
 @rendermode InteractiveServer
-@using Configurator
+@inject ReservationSystem ReservationSystem
 @using Domain
 
 <PageTitle>Home</PageTitle>
@@ -9,17 +9,15 @@
 
 @foreach (var classViewModel in _gymClasses)
 {
-    <GymClass GymClassViewModel=classViewModel ReservationSystem="_reservationSystem"></GymClass>
+    <GymClass GymClassViewModel=classViewModel></GymClass>
 }
 
 @code {
-
-    private readonly ReservationSystem _reservationSystem = ReservationSystemConfigurator.ConfigureReservationSystem();
     private IReadOnlyCollection<GymClassViewModel> _gymClasses = new List<GymClassViewModel>();
 
     protected override async Task OnInitializedAsync()
     {
-        _gymClasses = await _reservationSystem.ListClasses();
+        _gymClasses = await ReservationSystem.ListClasses();
     }
 
 }

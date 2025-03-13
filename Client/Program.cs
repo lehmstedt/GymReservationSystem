@@ -1,10 +1,15 @@
 using Client.Components;
+using Domain;
+using Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddDbContext<IReservationPort, SqliteReservationPort>();
+builder.Services.AddScoped<ReservationSystem>();
 
 var app = builder.Build();
 
@@ -24,5 +29,6 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+
 
 app.Run();

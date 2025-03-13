@@ -7,7 +7,7 @@ namespace Infrastructure;
 public class InMemoryReservationPort (IReadOnlyCollection<GymClass> classes): IReservationPort
 {
     private readonly Dictionary<ClassId, GymClass> _classes = classes.ToDictionary(c => c.Id);
-    public Task<GymClass?> GetClass(ClassId? askedClassId)
+    public Task<GymClass?> GetClass(ClassId askedClassId)
     {
         return Task.FromResult(classes.FirstOrDefault(x => x.Id.Equals(askedClassId)));
     }
