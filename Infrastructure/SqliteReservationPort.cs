@@ -1,22 +1,18 @@
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Infrastructure;
 
 public class SqliteReservationPort: DbContext, IReservationPort
 {
     public DbSet<GymClassEntity> Classes { get; set; }
-    private string DbPath { get; }
     
-    public SqliteReservationPort()
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        const Environment.SpecialFolder folder = Environment.SpecialFolder.LocalApplicationData;
-        var path = Environment.GetFolderPath(folder);
-        DbPath = Path.Join(path, "Reservations.db");
+        optionsBuilder.UseSqlite($"Data Source=/app/Reservations.db");
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite($"Data Source={DbPath}");
-    
     public async Task<GymClass?> GetClass(ClassId classId)
     {
         var entity = await Classes.FirstOrDefaultAsync(x => x.Id.Equals(classId.ToGuid()));
@@ -48,6 +44,21 @@ public class SqliteReservationPort: DbContext, IReservationPort
     public async Task<IReadOnlyCollection<GymClass>> ListClasses()
     {
         var list = await Classes.ToListAsync();
+        if (list.Count == 0)
+        {
+            Add(new GymClassEntity()
+            {
+                Id = Guid.NewGuid(),
+                Name = "WOD",
+                Reservations = []
+            });
+            Add(new GymClassEntity()
+            {
+                Id = Guid.NewGuid(),
+                Name = "Spinning",
+                Reservations = []
+            });
+        }
         return list.Select(l => new GymClass(l.Id, l.Name, l.Reservations)).ToList();
     }
 }

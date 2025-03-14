@@ -23,4 +23,5 @@ RUN dotnet publish "Client.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:Us
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+VOLUME /app
 ENTRYPOINT ["dotnet", "Client.dll"]

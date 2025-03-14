@@ -17,6 +17,7 @@
 
     protected override async Task OnInitializedAsync()
     {
+        
         _gymClasses = await ReservationSystem.ListClasses();
     }
 
