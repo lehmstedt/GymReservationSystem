@@ -1,5 +1,8 @@
 Client/bin/*
 Client/obj/*
+Domain/bin/*
+Domain/obj/*
 Infrastructure/bin/*
 Infrastructure/obj/*
 Tests/bin/*
+Test/obj/*
