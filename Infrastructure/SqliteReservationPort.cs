@@ -10,7 +10,7 @@ public class SqliteReservationPort: DbContext, IReservationPort
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite($"Data Source=/app/Reservations.db");
+        optionsBuilder.UseSqlite($"Data Source=/home/app/Reservations.db");
     }
 
     public async Task<GymClass?> GetClass(ClassId classId)
@@ -58,6 +58,7 @@ public class SqliteReservationPort: DbContext, IReservationPort
                 Name = "Spinning",
                 Reservations = []
             });
+            await SaveChangesAsync();
         }
         return list.Select(l => new GymClass(l.Id, l.Name, l.Reservations)).ToList();
     }
