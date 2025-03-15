@@ -1,0 +1,5 @@
+Client/bin/*
+Client/obj/*
+Infrastructure/bin/*
+Infrastructure/obj/*
+Tests/bin/*
