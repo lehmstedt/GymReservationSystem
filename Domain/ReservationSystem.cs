@@ -4,7 +4,7 @@ namespace Domain;
 
 public class ReservationSystem(IReservationPort reservationPort)
 {
-    public async Task<ReservationResult> Reserve(ClassId? classId, string name)
+    public async Task<ReservationResult> Reserve(ClassId classId, string name)
     {
         var foundClass = await reservationPort.GetClass(classId);
         if (foundClass == null) return ReservationResult.ClassNotFound;
