@@ -31,5 +31,7 @@ jobs:
       with:
         username: slehmstedt
     - name: Docker build
-      uses: docker/build-push-action@6.15.0
+      uses: docker/build-push-action@6
+      with:
+        push: true
       
