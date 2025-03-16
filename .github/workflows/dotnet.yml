@@ -50,9 +50,10 @@ jobs:
         user: ${{ vars.EC2_USER }}
         key: ${{ secrets.EC2_PRIVATE_KEY }}
         script: |
-          docker stop gym-reservation-system
-          docker rm gym-reservation-system
-          docker run --name=gym-reservation-system -d slehmstedt/gymreservationsystem --pull=always
+          # docker stop gym-reservation-system
+          # docker rm gym-reservation-system
+          # docker run --name=gym-reservation-system -d slehmstedt/gymreservationsystem --pull=always*/
+          docker ps
       
       
     
