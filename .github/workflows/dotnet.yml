@@ -27,7 +27,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     
-  docker:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -38,10 +38,23 @@ jobs:
         password: ${{ secrets.DOCKER_PAT }}
     - name: Setup Buildx
       uses: docker/setup-buildx-action@v3
-    - name: Build and push
+    - name: Build and push on Dockerhub
       uses: docker/build-push-action@v6
       with:
         push: true
         tags: slehmstedt/gymreservationsystem
+    - name: Pull image from EC2
+      uses: cross-the-world/ssh-pipeline@v1.2.0
+      with:
+        host: ${{ variables.EC2_PUBLIC_DOMAIN }}
+        user: ${{ variables.EC2_USER }}
+        key: ${{ secrets.EC2_PRIVATE_KEY }}
+      script: |
+        docker stop gym-reservation-system
+        docker rm gym-reservation-system
+        docker run --name=gym-reservation-system -d slehmstedt/gymreservationsystem --pull=always
+      
+      
+    
     
       
