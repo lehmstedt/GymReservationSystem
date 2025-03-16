@@ -49,11 +49,11 @@ jobs:
         host: ${{ vars.EC2_PUBLIC_DOMAIN }}
         user: ${{ vars.EC2_USER }}
         key: ${{ secrets.EC2_PRIVATE_KEY }}
-        script: |
-          # docker stop gym-reservation-system
-          # docker rm gym-reservation-system
-          # docker run --name=gym-reservation-system -d slehmstedt/gymreservationsystem --pull=always*/
-          docker ps
+        # script: |
+        #   docker stop gym-reservation-system
+        #   docker rm gym-reservation-system
+        #   docker run --name=gym-reservation-system -d slehmstedt/gymreservationsystem --pull=always*/
+        script: docker ps
       
       
     
