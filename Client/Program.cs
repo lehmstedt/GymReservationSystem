@@ -1,3 +1,4 @@
+using Client;
 using Client.Components;
 using Domain;
 using Infrastructure;
@@ -12,6 +13,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDbContext<IReservationPort, SqliteReservationPort>();
 
 builder.Services.AddScoped<ReservationSystem>();
+builder.Services.Configure<DatabaseOptions>(builder.Configuration.GetSection(DatabaseOptions.Database));
 
 var app = builder.Build();
 

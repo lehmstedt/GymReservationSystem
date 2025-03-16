@@ -1,15 +1,18 @@
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace Infrastructure;
 
-public class SqliteReservationPort: DbContext, IReservationPort
+public class SqliteReservationPort(IOptions<DatabaseOptions> options) : DbContext, IReservationPort
 {
     public DbSet<GymClassEntity> Classes { get; set; }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite($"Data Source=/home/app/Reservations.db");
+        optionsBuilder.UseSqlite(options.Value.ConnectionString);
     }
 
     public async Task<GymClass?> GetClass(ClassId classId)
