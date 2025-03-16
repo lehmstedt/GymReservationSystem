@@ -3,6 +3,10 @@ services:
     ports: 
       - "80:8080"
     build: .
+    volumes:
+      - sqlite-data:/home/app
 
-    
+volumes:
+  sqlite-data:
+    driver: local
     
